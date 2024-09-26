@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cf2d3b50bde758d4592ae1a933b51251
+guid: d45c28c5a2572094f950f1cd7b2dd19d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tank P2_0
+      name: tank P1_idleRight (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 130
-        height: 157
+        width: 200
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 233f20017cdf35d499d3b379c802c041
-      internalID: 1792532924
+      spriteID: 3685bfce6e8637b4dbe55456eb094f54
+      internalID: 1383559982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tank P2_1
+      name: tank P1_idleRight (1)_1
       rect:
         serializedVersion: 2
-        x: 130
+        x: 200
         y: 0
-        width: 130
-        height: 157
+        width: 200
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c209e7303a5f0ba49a8c41c8054f05d7
-      internalID: 782597282
+      spriteID: ebfc6f82d99c1e34f96ff4680057efde
+      internalID: -1578258080
       vertices: []
       indices: 
       edges: []
@@ -183,8 +183,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tank P2_0: 1792532924
-      tank P2_1: 782597282
+      tank P1_idleRight (1)_0: 1383559982
+      tank P1_idleRight (1)_1: -1578258080
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

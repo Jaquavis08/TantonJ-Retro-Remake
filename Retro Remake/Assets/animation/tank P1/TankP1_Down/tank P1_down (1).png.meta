@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cf2d3b50bde758d4592ae1a933b51251
+guid: 16ecbc877dd5b804893a6ec79a99b09a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tank P2_0
+      name: tank P1_down (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 130
-        height: 157
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 233f20017cdf35d499d3b379c802c041
-      internalID: 1792532924
+      spriteID: 551072fba8c6c7a4488152d182bf601a
+      internalID: -1452095881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tank P2_1
+      name: tank P1_down (1)_1
       rect:
         serializedVersion: 2
         x: 130
         y: 0
         width: 130
-        height: 157
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c209e7303a5f0ba49a8c41c8054f05d7
-      internalID: 782597282
+      spriteID: 49e93563dd5921943a763740134f5f99
+      internalID: -808920993
       vertices: []
       indices: 
       edges: []
@@ -183,8 +183,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tank P2_0: 1792532924
-      tank P2_1: 782597282
+      tank P1_down (1)_1: -808920993
+      tank P1_down (1)_0: -1452095881
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
