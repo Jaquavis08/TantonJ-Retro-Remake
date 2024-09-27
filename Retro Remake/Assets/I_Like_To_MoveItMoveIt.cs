@@ -7,8 +7,10 @@ public class I_Like_To_MoveItMoveIt : MonoBehaviour
 {
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S, jump = KeyCode.W;
     public float speed = 10, jumpHeight = 15;
+    public Animator animator;
+    Vector2 movement;
 
-    private Rigidbody2D _rb;
+    public Rigidbody2D _rb;
 
     // Start is called before the first frame update
 
@@ -53,5 +55,8 @@ public class I_Like_To_MoveItMoveIt : MonoBehaviour
             // get the GameObject's Rigidbody2D component and set its velocity to be the jump  at the given speed
             _rb.velocity = Vector2.up * jumpHeight;
         }
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 }

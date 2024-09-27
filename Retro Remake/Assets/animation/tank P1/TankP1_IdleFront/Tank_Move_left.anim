@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TankP1_IdleFront
+  m_Name: Tank_Move_left
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -79102060, guid: 5404a8bf2f542034187a3d0faef364ed, type: 3}
+      value: {fileID: 451649164, guid: 0f197ca7d9fa6e04f828d214d77b831f, type: 3}
     - time: 0.125
-      value: {fileID: -1677234226, guid: 5404a8bf2f542034187a3d0faef364ed, type: 3}
+      value: {fileID: 1028602048, guid: 0f197ca7d9fa6e04f828d214d77b831f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -43,8 +43,8 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
     pptrCurveMapping:
-    - {fileID: -79102060, guid: 5404a8bf2f542034187a3d0faef364ed, type: 3}
-    - {fileID: -1677234226, guid: 5404a8bf2f542034187a3d0faef364ed, type: 3}
+    - {fileID: 451649164, guid: 0f197ca7d9fa6e04f828d214d77b831f, type: 3}
+    - {fileID: 1028602048, guid: 0f197ca7d9fa6e04f828d214d77b831f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
