@@ -1276,7 +1276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165080136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13106,6 +13106,7 @@ GameObject:
   - component: {fileID: 2006680499}
   - component: {fileID: 2006680498}
   - component: {fileID: 2006680503}
+  - component: {fileID: 2006680504}
   m_Layer: 0
   m_Name: tank P1_idlefront (1)_0
   m_TagString: Untagged
@@ -13146,7 +13147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593f4265a7028ff4aafc409aaa7a3db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5.05
+  left: 97
+  right: 100
+  up: 119
+  down: 115
+  jump: 0
+  speed: 6
+  jumpHeight: 15
   rb: {fileID: 2006680498}
   animator: {fileID: 2006680500}
 --- !u!95 &2006680500
@@ -13229,8 +13236,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006680497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.44, y: -12.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.5216, y: -12.9735, z: 0}
+  m_LocalScale: {x: 0.9388, y: 0.9523, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 165080137}
@@ -13263,6 +13270,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8914576, y: 2.159439}
   m_EdgeRadius: 0
+--- !u!114 &2006680504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006680497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351eb45cb807adb40b4fd5acb86fce4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pewPewPlace: {fileID: 165080137}
+  bulletPrefab: {fileID: 3686046470196056063, guid: 24af33c2413be6547bb6985d629840fb, type: 3}
+  bulletForce: 20
 --- !u!1 &2007513762
 GameObject:
   m_ObjectHideFlags: 0
