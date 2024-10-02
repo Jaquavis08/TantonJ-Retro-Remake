@@ -57,4 +57,9 @@ public class I_Like_To_MoveItMoveIt : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
+    void FixedUpdate()
+    {
+        
+    }
+    
 }

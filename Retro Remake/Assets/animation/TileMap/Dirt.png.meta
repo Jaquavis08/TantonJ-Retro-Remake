@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e01eeea4fd392214ebc46c00efdb3c02
+guid: 3edc0d7d0b4914e49bde8f4cbd61ae87
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25.52
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,41 +103,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flage_0
+      name: Dirt_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 33
-        width: 56
-        height: 33
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ada89a62ae6cd4fa3380cb3cfe28bc
-      internalID: 1957304825
+      spriteID: 9cfdf0bdfd12ecf48a688b897439ce0e
+      internalID: 1767250181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flage_1
+      name: Dirt_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 56
-        height: 33
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +142,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e426894e19daecf4790d8fef51285627
-      internalID: -1244201943
+      spriteID: b96bd636b292a9b4584582f0fb7d1083
+      internalID: -510230574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6681d979c65314c896ca15b6f9c8c6
+      internalID: 615600610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e5e174aae977d4d9a7df11f3f6d7aa
+      internalID: 2089093962
       vertices: []
       indices: 
       edges: []
@@ -183,8 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      flage_1: -1244201943
-      flage_0: 1957304825
+      Dirt_0: 1767250181
+      Dirt_3: 2089093962
+      Dirt_2: 615600610
+      Dirt_1: -510230574
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PewPew : MonoBehaviour
 {
-    public Transform pewPewPlace;
+  
+    public Transform firePoint;
     public GameObject bulletPrefab;
 
     public float bulletForce = 20f;
@@ -19,8 +20,9 @@ public class PewPew : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, pewPewPlace.position, pewPewPlace.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(pewPewPlace.up * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
+  
 }
