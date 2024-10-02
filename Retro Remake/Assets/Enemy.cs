@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class Enemy : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D rb;
     public float roatateSpeed = 0.0025f;
-    private void start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -23,7 +24,7 @@ public class Enemy : MonoBehaviour
         {
             RotateTowardsTarget();
         }
-
+        
 
 
 
@@ -44,6 +45,23 @@ public class Enemy : MonoBehaviour
 
     private void GetTarget()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+        
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("player"))
+        {
+            Destroy(other.gameObject);
+            target = null;
+        }
+        else if (other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
