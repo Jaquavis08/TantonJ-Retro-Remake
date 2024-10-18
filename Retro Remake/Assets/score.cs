@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class score : MonoBehaviour
 {
+    
     public int currentScore;
     public TMPro.TMP_Text scoreText;
 
@@ -18,5 +21,13 @@ public class score : MonoBehaviour
     void Update()
     {
         scoreText.SetText("Score: " + currentScore.ToString());
+
+        if (CompareTag("Enemy"))
+        {
+            
+            currentScore += 1;
+            scoreText.SetText("Score: " + currentScore);
+            
+        }
     }
 }
