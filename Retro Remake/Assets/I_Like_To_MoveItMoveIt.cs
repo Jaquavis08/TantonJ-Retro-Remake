@@ -25,24 +25,32 @@ public class I_Like_To_MoveItMoveIt : MonoBehaviour
         {
             // get the GameObject's Rigidbody2D component and set its velocity to be the left  at the given speed
             rb.velocity = Vector2.left * speed;
+            Vector3 RotationLeft = new Vector3(0, 0, 90);
+            transform.eulerAngles = RotationLeft;
         }
 
         if (Input.GetKey(right))    // check for player holding down the right button
         {
             // get the GameObject's Rigidbody2D component and set its velocity to be the right  at the given speed
             rb.velocity = Vector2.right * speed;
+            Vector3 RotationRight = new Vector3(0, 0, -90);
+            transform.eulerAngles = RotationRight;
         }
 
         if (Input.GetKey(up))   // check for player holding down the up button
         {
             // get the GameObject's Rigidbody2D component and set its velocity to be the up  at the given speed
             rb.velocity = Vector2.up * speed;
+            Vector3 RotationUp = new Vector3(0, 0, 0);
+            transform.eulerAngles = RotationUp;
         }
 
         if (Input.GetKey(down))  // check for player holding down the down button
         {
             // get the GameObject's Rigidbody2D component and set its velocity to be the down  at the given speed
             rb.velocity = Vector2.down * speed;
+            Vector3 RotationDown = new Vector3(0, 0, 180);
+            transform.eulerAngles = RotationDown;
         }
 
         if (Input.GetKeyDown(jump))  // check for the player pressing the jump button
