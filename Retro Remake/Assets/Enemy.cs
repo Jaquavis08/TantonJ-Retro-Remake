@@ -60,8 +60,10 @@ public class Enemy : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Bullet"))
         {
+            score.Instance.currentScore += 1;
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+        
     }
 }

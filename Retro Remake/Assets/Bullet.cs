@@ -5,21 +5,16 @@ using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject Score;
     public GameObject hitEffect;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D other)
     {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
-        print(gameObject);
-        if(gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-            //Score.text = 
-        }
-       
-        
+
+        Destroy(this.gameObject);
+
+
     }
 
 }

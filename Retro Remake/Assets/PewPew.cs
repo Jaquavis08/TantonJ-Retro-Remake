@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PewPew : MonoBehaviour
 {
-  
+    public KeyCode shoot = KeyCode.E;
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -13,7 +13,7 @@ public class PewPew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(shoot))
         {
             Shoot();
         }
