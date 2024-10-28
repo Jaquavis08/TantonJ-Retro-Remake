@@ -24,13 +24,6 @@ public class GameOver : MonoBehaviour
             return;
         }
 
-        if (player1.gameObject == null)
-        {
-            gameOver.SetActive(true);
-            Time.timeScale = 1.0f;
-            return;
-        }
-
 
     }
 }
