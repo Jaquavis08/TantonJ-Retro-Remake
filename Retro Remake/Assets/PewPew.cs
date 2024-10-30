@@ -13,7 +13,7 @@ public class PewPew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(shoot))
+        if (Input.GetKeyDown(shoot))
         {
             Shoot();
         }
@@ -24,5 +24,5 @@ public class PewPew : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(bullet.transform.up * bulletForce, ForceMode2D.Impulse);
     }
-  
+
 }

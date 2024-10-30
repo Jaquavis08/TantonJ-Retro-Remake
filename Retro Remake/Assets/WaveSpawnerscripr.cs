@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class WaveSpawnerscripr : MonoBehaviour
 {
-    public List<Enemy> enemies = new List<Enemy>();
+    public List<enemy> enemies = new List<enemy>();
     public int currWave;
     public int waveValue;
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
+
+    public Transform spawnLocation;
+    public int waveDuration;
+    private float waveTimer;
+    private float spawnInterval;
+    private float spawnTimer;
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,15 +26,37 @@ public class WaveSpawnerscripr : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (spawnTimer <=0)
+        {
+            // spawn an enemy
+            if(enemiesToSpawn.Count > 0)
+            {
+                Random.RandomRange(minX, maxY);
+                Instantiate(enemiesToSpawn[0], spawnLocation.position,Quaternion.identity); // spawn first enemy in the list
+                enemiesToSpawn.RemoveAt(0); // and remove it
+                spawnTimer = spawnInterval;
+            }
+            else
+            {
+                waveTimer = 0;
+            }
+        }
+        else
+        {
+            spawnTimer -= Time.fixedDeltaTime;
+            waveTimer -= Time.fixedDeltaTime;
+        }
     }
 
     public void GenerateWave()
     {
         waveValue = currWave * 10;
         GenerateEnemies();
+
+        spawnInterval = waveDuration / enemiesToSpawn.Count; // gives a fixed time between each enemy
+        waveTimer = waveDuration; // wave duration is read only
     }
 
     public void GenerateEnemies()
@@ -50,8 +83,7 @@ public class WaveSpawnerscripr : MonoBehaviour
 }
 
 [System.Serializable]
-
-public class Enemy
+public class enemy
 {
     public GameObject enemyPrefab;
     public int cost;
