@@ -17984,7 +17984,7 @@ GameObject:
   - component: {fileID: 1458917728}
   m_Layer: 0
   m_Name: P2 Tank
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18001,10 +18001,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351eb45cb807adb40b4fd5acb86fce4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 303
+  shoot: 265
   firePoint: {fileID: 1712842933}
   bulletPrefab: {fileID: 3686046470196056063, guid: 24af33c2413be6547bb6985d629840fb, type: 3}
-  bulletForce: 20
+  bulletForce: 30
 --- !u!61 &1458917729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18064,15 +18064,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593f4265a7028ff4aafc409aaa7a3db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 276
-  right: 275
-  up: 273
-  down: 274
+  left: 260
+  right: 262
+  up: 264
+  down: 261
   jump: 0
-  speed: 6
+  speed: 7
   jumpHeight: 15
   rb: {fileID: 1458917730}
   animator: {fileID: 1458917732}
+  PlayerInfo: Player2
 --- !u!95 &1458917732
 Animator:
   serializedVersion: 4
@@ -19300,13 +19301,13 @@ MonoBehaviour:
     Chance: 1
   - enemyPrefab: {fileID: 6970523771698251925, guid: f863f0dcd6383074ea867a8b4737ee86, type: 3}
     Chance: 4
-  currWave: 1
-  waveValue: 1
+  currWave: 8
+  waveValue: 4
   enemiesToSpawn: []
   spawnLocation: {fileID: 446552792}
   spawnRadius: 25
   centerPosition: {x: 0, y: 0}
-  waveDuration: 20
+  waveDuration: 102
   WaveText: {fileID: 1007762515}
 --- !u!4 &1814211932
 Transform:
@@ -20186,7 +20187,7 @@ GameObject:
   - component: {fileID: 2006680504}
   m_Layer: 0
   m_Name: P1 Tank
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20229,10 +20230,11 @@ MonoBehaviour:
   up: 119
   down: 115
   jump: 0
-  speed: 6
+  speed: 7
   jumpHeight: 15
   rb: {fileID: 2006680498}
   animator: {fileID: 2006680500}
+  PlayerInfo: Player1
 --- !u!95 &2006680500
 Animator:
   serializedVersion: 4
@@ -20362,7 +20364,7 @@ MonoBehaviour:
   shoot: 101
   firePoint: {fileID: 165080137}
   bulletPrefab: {fileID: 3686046470196056063, guid: 24af33c2413be6547bb6985d629840fb, type: 3}
-  bulletForce: 20
+  bulletForce: 30
 --- !u!1 &2007513762
 GameObject:
   m_ObjectHideFlags: 0

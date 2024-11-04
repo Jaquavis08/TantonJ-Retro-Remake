@@ -1,4 +1,4 @@
-using System;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D rb;
     public float roatateSpeed = 0.0025f;
+    public string PlayerInfo;
+    private int EnemyChance;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,15 +48,32 @@ public class Enemy : MonoBehaviour
 
     private void GetTarget()
     {
-        if (GameObject.FindGameObjectWithTag("Player"))
+        EnemyChance = Random.Range(1, 3);
+
+        if (EnemyChance == 1 && !GameObject.FindGameObjectWithTag("Player1"))
         {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            target = GameObject.FindGameObjectWithTag("Player1").transform;
         }
-        
+
+        if (EnemyChance == 2 && !GameObject.FindGameObjectWithTag("Player2"))
+        {
+            target = GameObject.FindGameObjectWithTag("Player2").transform;
+        }
+        else
+        {
+            target = GameObject.FindGameObjectWithTag("Player1").transform;
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player1"))
+        {
+            Destroy(other.gameObject);
+            target = null;
+        }
+
+        if (other.gameObject.CompareTag("Player2"))
         {
             Destroy(other.gameObject);
             target = null;
@@ -64,6 +84,7 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+
         
     }
 }
