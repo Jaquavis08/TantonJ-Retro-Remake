@@ -38,10 +38,17 @@ public class WaveSpawnerscripr : MonoBehaviour
             // spawn an enemy
             if(enemiesToSpawn.Count > 0)
             {
-                centerPosition = spawnLocation.position;
-                Vector2 randomSpawn = Random.insideUnitSphere * spawnRadius;
-                Vector2 spawnPosition = randomSpawn + centerPosition;
-                Instantiate(enemiesToSpawn[0], spawnPosition, Quaternion.identity); // spawn first enemy in the list
+                //centerPosition = spawnLocation.position;
+                //Vector2 randomSpawn = Random.insideUnitSphere * spawnRadius;
+                //Vector2 spawnPosition = randomSpawn + centerPosition;
+
+                float MinX = -26f;
+                float MaxX = 26f;
+                float MinY = -14f;
+                float MaxY = 14f;
+
+                Vector2 Position = new Vector2 (Random.Range(MinX, MaxX), Random.Range(MinY, MaxY));
+                Instantiate(enemiesToSpawn[0], Position, Quaternion.identity); // spawn first enemy in the list
                 enemiesToSpawn.RemoveAt(0); // and remove it
                 spawnTimer = spawnInterval;
             }
@@ -70,7 +77,7 @@ public class WaveSpawnerscripr : MonoBehaviour
             int randEnemyId = Random.Range(0, enemies.Count);
             int randEnemyCost = enemies[randEnemyId].Chance;
 
-            if(waveValue-randEnemyCost >= 0)
+            if(waveValue - randEnemyCost >= 0)
             {
                 generatedEnemies.Add(enemies[randEnemyId].enemyPrefab);
                 waveValue -= randEnemyCost;

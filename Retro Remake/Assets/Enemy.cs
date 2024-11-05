@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D rb;
     public float roatateSpeed = 0.0025f;
-    public string PlayerInfo;
     private int EnemyChance;
     
     private void Start()
@@ -50,12 +49,12 @@ public class Enemy : MonoBehaviour
     {
         EnemyChance = Random.Range(1, 3);
 
-        if (EnemyChance == 1 && !GameObject.FindGameObjectWithTag("Player1"))
+        if (EnemyChance == 1 && GameObject.FindGameObjectWithTag("Player1"))
         {
             target = GameObject.FindGameObjectWithTag("Player1").transform;
         }
 
-        if (EnemyChance == 2 && !GameObject.FindGameObjectWithTag("Player2"))
+        if (EnemyChance == 2 && GameObject.FindGameObjectWithTag("Player2"))
         {
             target = GameObject.FindGameObjectWithTag("Player2").transform;
         }
@@ -78,7 +77,7 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
             target = null;
         }
-        else if (other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             score.Instance.currentScore += 1;
             Destroy(other.gameObject);

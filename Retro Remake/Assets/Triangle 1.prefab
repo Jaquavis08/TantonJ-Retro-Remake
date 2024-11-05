@@ -102,6 +102,7 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 4
   roatateSpeed: 0.25
+  PlayerInfo: 
 --- !u!50 &6970523771698251924
 Rigidbody2D:
   serializedVersion: 4

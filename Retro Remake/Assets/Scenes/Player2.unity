@@ -18069,11 +18069,10 @@ MonoBehaviour:
   up: 264
   down: 261
   jump: 0
-  speed: 7
-  jumpHeight: 15
+  speed: 10
   rb: {fileID: 1458917730}
   animator: {fileID: 1458917732}
-  PlayerInfo: Player2
+  health: 3
 --- !u!95 &1458917732
 Animator:
   serializedVersion: 4
@@ -18136,7 +18135,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -79102060, guid: 5404a8bf2f542034187a3d0faef364ed, type: 3}
-  m_Color: {r: 0.054957267, g: 0.33188605, b: 0.6132076, a: 1}
+  m_Color: {r: 0.1745283, g: 0.5872642, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20230,11 +20229,10 @@ MonoBehaviour:
   up: 119
   down: 115
   jump: 0
-  speed: 7
-  jumpHeight: 15
+  speed: 10
   rb: {fileID: 2006680498}
   animator: {fileID: 2006680500}
-  PlayerInfo: Player1
+  health: 3
 --- !u!95 &2006680500
 Animator:
   serializedVersion: 4
@@ -20297,7 +20295,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -79102060, guid: 5404a8bf2f542034187a3d0faef364ed, type: 3}
-  m_Color: {r: 0.6698113, g: 0.48608074, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
