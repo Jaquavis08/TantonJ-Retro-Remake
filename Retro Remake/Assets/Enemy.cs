@@ -49,34 +49,34 @@ public class Enemy : MonoBehaviour
     {
         EnemyChance = Random.Range(1, 3);
 
-        if (EnemyChance == 1 && GameObject.FindGameObjectWithTag("Player1"))
+        if (EnemyChance == 1 && GameObject.FindGameObjectWithTag("Player"))
         {
-            target = GameObject.FindGameObjectWithTag("Player1").transform;
+            target = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
-        if (EnemyChance == 2 && GameObject.FindGameObjectWithTag("Player2"))
-        {
-            target = GameObject.FindGameObjectWithTag("Player2").transform;
-        }
+        //if (EnemyChance == 2 && GameObject.FindGameObjectWithTag("Player2"))
+        //{
+        //    target = GameObject.FindGameObjectWithTag("Player2").transform;
+        //}
         else
         {
-            target = GameObject.FindGameObjectWithTag("Player1").transform;
+            target = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player1"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Destroy(other.gameObject);
             target = null;
         }
 
-        if (other.gameObject.CompareTag("Player2"))
-        {
-            Destroy(other.gameObject);
-            target = null;
-        }
+        //if (other.gameObject.CompareTag("Player2"))
+        //{
+        //    Destroy(other.gameObject);
+        //    target = null;
+        //}
         if (other.gameObject.CompareTag("Bullet"))
         {
             score.Instance.currentScore += 1;
